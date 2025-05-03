@@ -88,5 +88,12 @@ namespace NotesApp.Forms
             var form = new EditProfileForm(null, recoveryMode: true);
             form.ShowDialog();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var startForm = new StartForm();
+            startForm.Show();
+        }
     }
 }

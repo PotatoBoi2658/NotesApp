@@ -33,7 +33,12 @@ namespace NotesApp.Tests
             _context.Users.Add(user);
             _context.SaveChanges();
         }
-
+        [TearDown]
+        public void TearDown()
+        {
+            _context.Database.EnsureDeleted(); // Ensure the in-memory database is reset
+            _context.Dispose();
+        }
         [Test]
         public void Login_WithCorrectCredentials_ReturnsUser()
         {
@@ -59,7 +64,7 @@ namespace NotesApp.Tests
         [Test]
         public void GetUserByEmail_ShouldReturnCorrectEmail()
         {
-            var email = _userService.GetUserByEmail("testuser");
+            var email = _userService.GetUserByEmail("test@example.com");
             ClassicAssert.IsNotNull(email);
             ClassicAssert.AreEqual("testuser", email.Username);
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             txtTitle = new TextBox();
             txtContent = new TextBox();
             btnAddNote = new Button();
@@ -36,30 +37,33 @@
             btnDeleteNote = new Button();
             lblCurrentUser = new Label();
             btnEditProfile = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvNotes).BeginInit();
             SuspendLayout();
             // 
             // txtTitle
             // 
-            txtTitle.Font = new Font("Segoe UI", 13F);
-            txtTitle.Location = new Point(529, 6);
+            txtTitle.Font = new Font("Segoe UI", 12F);
+            txtTitle.Location = new Point(529, 9);
             txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(134, 31);
+            txtTitle.Size = new Size(134, 29);
             txtTitle.TabIndex = 2;
             // 
             // txtContent
             // 
+            txtContent.AcceptsTab = true;
             txtContent.Font = new Font("Segoe UI", 10F);
-            txtContent.Location = new Point(529, 41);
+            txtContent.Location = new Point(529, 44);
             txtContent.Multiline = true;
             txtContent.Name = "txtContent";
-            txtContent.Size = new Size(377, 435);
+            txtContent.ScrollBars = ScrollBars.Both;
+            txtContent.Size = new Size(408, 435);
             txtContent.TabIndex = 3;
             // 
             // btnAddNote
             // 
-            btnAddNote.Font = new Font("Segoe UI", 10F);
-            btnAddNote.Location = new Point(12, 444);
+            btnAddNote.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            btnAddNote.Location = new Point(12, 447);
             btnAddNote.Name = "btnAddNote";
             btnAddNote.Size = new Size(134, 32);
             btnAddNote.TabIndex = 4;
@@ -70,17 +74,17 @@
             // dgvNotes
             // 
             dgvNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvNotes.Location = new Point(12, 40);
+            dgvNotes.Location = new Point(12, 44);
             dgvNotes.Name = "dgvNotes";
-            dgvNotes.Size = new Size(511, 398);
+            dgvNotes.Size = new Size(511, 397);
             dgvNotes.TabIndex = 5;
             dgvNotes.CellContentClick += dgvNotes_CellContentClick;
             dgvNotes.SelectionChanged += dgvNotes_SelectionChanged;
             // 
             // btnEditNote
             // 
-            btnEditNote.Font = new Font("Segoe UI", 10F);
-            btnEditNote.Location = new Point(152, 444);
+            btnEditNote.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            btnEditNote.Location = new Point(152, 447);
             btnEditNote.Name = "btnEditNote";
             btnEditNote.Size = new Size(232, 32);
             btnEditNote.TabIndex = 6;
@@ -90,8 +94,8 @@
             // 
             // btnDeleteNote
             // 
-            btnDeleteNote.Font = new Font("Segoe UI", 10F);
-            btnDeleteNote.Location = new Point(390, 444);
+            btnDeleteNote.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            btnDeleteNote.Location = new Point(390, 447);
             btnDeleteNote.Name = "btnDeleteNote";
             btnDeleteNote.Size = new Size(134, 32);
             btnDeleteNote.TabIndex = 7;
@@ -102,29 +106,42 @@
             // lblCurrentUser
             // 
             lblCurrentUser.AutoSize = true;
-            lblCurrentUser.Font = new Font("Segoe UI", 13F);
-            lblCurrentUser.Location = new Point(12, 9);
+            lblCurrentUser.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            lblCurrentUser.Location = new Point(12, 12);
             lblCurrentUser.Name = "lblCurrentUser";
-            lblCurrentUser.Size = new Size(59, 25);
+            lblCurrentUser.Size = new Size(62, 25);
             lblCurrentUser.TabIndex = 8;
             lblCurrentUser.Text = "Henlo";
             // 
             // btnEditProfile
             // 
-            btnEditProfile.Font = new Font("Segoe UI", 10F);
-            btnEditProfile.Location = new Point(737, 5);
+            btnEditProfile.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            btnEditProfile.Location = new Point(669, 8);
             btnEditProfile.Name = "btnEditProfile";
-            btnEditProfile.Size = new Size(169, 32);
+            btnEditProfile.Size = new Size(194, 32);
             btnEditProfile.TabIndex = 9;
             btnEditProfile.Text = "Редактирай профила си";
             btnEditProfile.UseVisualStyleBackColor = true;
             btnEditProfile.Click += btnEditProfile_Click;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            button1.Location = new Point(869, 8);
+            button1.Name = "button1";
+            button1.Size = new Size(67, 31);
+            button1.TabIndex = 10;
+            button1.Text = "Изход";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(919, 487);
+            BackColor = Color.Tan;
+            ClientSize = new Size(948, 488);
+            Controls.Add(button1);
             Controls.Add(btnEditProfile);
             Controls.Add(lblCurrentUser);
             Controls.Add(btnDeleteNote);
@@ -133,6 +150,7 @@
             Controls.Add(btnAddNote);
             Controls.Add(txtContent);
             Controls.Add(txtTitle);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             Text = "Бележки";
             Load += Form1_Load;
@@ -150,5 +168,6 @@
         private Button btnDeleteNote;
         private Label lblCurrentUser;
         private Button btnEditProfile;
+        private Button button1;
     }
 }

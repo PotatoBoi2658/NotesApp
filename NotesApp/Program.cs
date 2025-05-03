@@ -1,4 +1,5 @@
 using NotesApp.Forms;
+using System.Runtime.CompilerServices;
 
 namespace NotesApp
 {
@@ -14,7 +15,8 @@ namespace NotesApp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new StartForm());
-
+            Environment.Exit(0);
+            
         }
     }
 }

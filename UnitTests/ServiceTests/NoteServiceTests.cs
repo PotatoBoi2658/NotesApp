@@ -37,7 +37,12 @@ namespace NotesApp.Tests
             _context.Users.Add(_testUser);
             _context.SaveChanges();
         }
+        [TearDown]
+        public void TearDown()
+        {
+            _context.Dispose();
 
+        }
         [Test]
         public void AddNote_Should_Save_Note_In_Database()
         {

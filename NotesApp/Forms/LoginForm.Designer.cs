@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             label1 = new Label();
             label2 = new Label();
             txtEmail = new TextBox();
@@ -35,25 +36,26 @@
             btnLogin = new Button();
             btnTestLogin = new Button();
             button1 = new Button();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13F);
+            label1.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(70, 25);
+            label1.Size = new Size(74, 25);
             label1.TabIndex = 0;
             label1.Text = "Имейл:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13F);
+            label2.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
             label2.Location = new Point(12, 55);
             label2.Name = "label2";
-            label2.Size = new Size(78, 25);
+            label2.Size = new Size(79, 25);
             label2.TabIndex = 1;
             label2.Text = "Парола:";
             // 
@@ -76,18 +78,18 @@
             // 
             // btnLogin
             // 
-            btnLogin.Font = new Font("Segoe UI", 13F);
+            btnLogin.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
             btnLogin.Location = new Point(35, 100);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(161, 33);
             btnLogin.TabIndex = 4;
-            btnLogin.Text = "Login";
+            btnLogin.Text = "Вход";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
             // btnTestLogin
             // 
-            btnTestLogin.Font = new Font("Segoe UI", 13F);
+            btnTestLogin.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
             btnTestLogin.Location = new Point(209, 100);
             btnTestLogin.Name = "btnTestLogin";
             btnTestLogin.Size = new Size(161, 33);
@@ -98,8 +100,8 @@
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 13F);
-            button1.Location = new Point(96, 139);
+            button1.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            button1.Location = new Point(35, 139);
             button1.Name = "button1";
             button1.Size = new Size(211, 33);
             button1.TabIndex = 6;
@@ -107,11 +109,24 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // btnBack
+            // 
+            btnBack.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            btnBack.Location = new Point(252, 139);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(118, 33);
+            btnBack.TabIndex = 7;
+            btnBack.Text = "Назад";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Tan;
             ClientSize = new Size(412, 180);
+            Controls.Add(btnBack);
             Controls.Add(button1);
             Controls.Add(btnTestLogin);
             Controls.Add(btnLogin);
@@ -119,6 +134,7 @@
             Controls.Add(txtEmail);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LoginForm";
             Text = "Вход";
             Load += LoginForm_Load;
@@ -135,5 +151,6 @@
         private Button btnLogin;
         private Button btnTestLogin;
         private Button button1;
+        private Button btnBack;
     }
 }

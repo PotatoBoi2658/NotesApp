@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -35,35 +36,36 @@
             txtPassword = new TextBox();
             txtUsername = new TextBox();
             btnRegister = new Button();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
+            label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(137, 19);
+            label1.Size = new Size(139, 19);
             label1.TabIndex = 0;
             label1.Text = "Потребителско име:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
+            label2.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label2.Location = new Point(12, 65);
             label2.Name = "label2";
-            label2.Size = new Size(54, 19);
+            label2.Size = new Size(56, 19);
             label2.TabIndex = 1;
             label2.Text = "Имейл:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F);
+            label3.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
             label3.Location = new Point(12, 121);
             label3.Name = "label3";
-            label3.Size = new Size(59, 19);
+            label3.Size = new Size(60, 19);
             label3.TabIndex = 2;
             label3.Text = "Парола:";
             // 
@@ -94,8 +96,8 @@
             // 
             // btnRegister
             // 
-            btnRegister.Font = new Font("Segoe UI", 13F);
-            btnRegister.Location = new Point(81, 180);
+            btnRegister.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            btnRegister.Location = new Point(12, 182);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(177, 40);
             btnRegister.TabIndex = 6;
@@ -103,11 +105,24 @@
             btnRegister.UseVisualStyleBackColor = true;
             btnRegister.Click += btnRegister_Click;
             // 
+            // btnBack
+            // 
+            btnBack.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            btnBack.Location = new Point(195, 182);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(140, 40);
+            btnBack.TabIndex = 7;
+            btnBack.Text = "Назад";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Tan;
             ClientSize = new Size(345, 231);
+            Controls.Add(btnBack);
             Controls.Add(btnRegister);
             Controls.Add(txtUsername);
             Controls.Add(txtPassword);
@@ -115,6 +130,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "RegisterForm";
             Text = "Регистрация";
             ResumeLayout(false);
@@ -130,5 +146,6 @@
         private TextBox txtPassword;
         private TextBox txtUsername;
         private Button btnRegister;
+        private Button btnBack;
     }
 }

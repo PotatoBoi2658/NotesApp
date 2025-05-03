@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             btnLogin = new Button();
             btnRegister = new Button();
             label1 = new Label();
@@ -35,8 +36,8 @@
             // 
             // btnLogin
             // 
-            btnLogin.Font = new Font("Segoe UI", 13F);
-            btnLogin.Location = new Point(32, 52);
+            btnLogin.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            btnLogin.Location = new Point(39, 52);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(98, 33);
             btnLogin.TabIndex = 0;
@@ -46,8 +47,8 @@
             // 
             // btnRegister
             // 
-            btnRegister.Font = new Font("Segoe UI", 13F);
-            btnRegister.Location = new Point(156, 52);
+            btnRegister.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            btnRegister.Location = new Point(163, 52);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(130, 33);
             btnRegister.TabIndex = 1;
@@ -58,21 +59,24 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15F);
+            label1.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(299, 28);
+            label1.Size = new Size(310, 28);
             label1.TabIndex = 3;
             label1.Text = "Моля изберете стартова опция";
+            label1.Click += label1_Click;
             // 
             // StartForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(326, 107);
+            BackColor = Color.Tan;
+            ClientSize = new Size(330, 107);
             Controls.Add(label1);
             Controls.Add(btnRegister);
             Controls.Add(btnLogin);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "StartForm";
             Text = "Стартова опция";
             Load += StartForm_Load;

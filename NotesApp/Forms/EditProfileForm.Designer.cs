@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfileForm));
             lblEmail = new Label();
             lblNewPassword = new Label();
             lblNoteTitle = new Label();
@@ -37,47 +38,49 @@
             txtNoteTitle = new TextBox();
             txtUserName = new TextBox();
             lblUserName = new Label();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Font = new Font("Segoe UI", 13F);
+            lblEmail.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
             lblEmail.Location = new Point(66, 59);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(70, 25);
+            lblEmail.Size = new Size(74, 25);
             lblEmail.TabIndex = 0;
             lblEmail.Text = "Имейл:";
             // 
             // lblNewPassword
             // 
             lblNewPassword.AutoSize = true;
-            lblNewPassword.Font = new Font("Segoe UI", 13F);
+            lblNewPassword.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
             lblNewPassword.Location = new Point(66, 101);
             lblNewPassword.Name = "lblNewPassword";
-            lblNewPassword.Size = new Size(123, 25);
+            lblNewPassword.Size = new Size(125, 25);
             lblNewPassword.TabIndex = 1;
             lblNewPassword.Text = "Нова парола:";
             // 
             // lblNoteTitle
             // 
             lblNoteTitle.AutoSize = true;
-            lblNoteTitle.Font = new Font("Segoe UI", 13F);
+            lblNoteTitle.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
             lblNoteTitle.Location = new Point(106, 147);
             lblNoteTitle.Name = "lblNoteTitle";
-            lblNoteTitle.Size = new Size(317, 25);
+            lblNoteTitle.Size = new Size(329, 25);
             lblNoteTitle.TabIndex = 2;
             lblNoteTitle.Text = "Потвърди едно заглавие на бележка:";
             // 
             // btnSave
             // 
-            btnSave.Font = new Font("Segoe UI", 13F);
-            btnSave.Location = new Point(200, 212);
+            btnSave.BackColor = SystemColors.Control;
+            btnSave.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            btnSave.Location = new Point(125, 212);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(134, 41);
             btnSave.TabIndex = 3;
             btnSave.Text = "Запази";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // txtEmail
@@ -95,13 +98,14 @@
             txtNewPassword.Name = "txtNewPassword";
             txtNewPassword.Size = new Size(272, 31);
             txtNewPassword.TabIndex = 5;
+            txtNewPassword.UseSystemPasswordChar = true;
             // 
             // txtNoteTitle
             // 
             txtNoteTitle.Font = new Font("Segoe UI", 13F);
-            txtNoteTitle.Location = new Point(128, 175);
+            txtNoteTitle.Location = new Point(125, 175);
             txtNoteTitle.Name = "txtNoteTitle";
-            txtNoteTitle.Size = new Size(267, 31);
+            txtNoteTitle.Size = new Size(274, 31);
             txtNoteTitle.TabIndex = 6;
             // 
             // txtUserName
@@ -115,18 +119,32 @@
             // lblUserName
             // 
             lblUserName.AutoSize = true;
-            lblUserName.Font = new Font("Segoe UI", 13F);
+            lblUserName.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
             lblUserName.Location = new Point(66, 15);
             lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(180, 25);
+            lblUserName.Size = new Size(189, 25);
             lblUserName.TabIndex = 7;
             lblUserName.Text = "Потребителско Име:";
+            // 
+            // btnBack
+            // 
+            btnBack.BackColor = SystemColors.Control;
+            btnBack.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
+            btnBack.Location = new Point(265, 212);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(134, 41);
+            btnBack.TabIndex = 9;
+            btnBack.Text = "Назад";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
             // 
             // EditProfileForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Tan;
             ClientSize = new Size(549, 313);
+            Controls.Add(btnBack);
             Controls.Add(txtUserName);
             Controls.Add(lblUserName);
             Controls.Add(txtNoteTitle);
@@ -136,6 +154,7 @@
             Controls.Add(lblNoteTitle);
             Controls.Add(lblNewPassword);
             Controls.Add(lblEmail);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EditProfileForm";
             Text = "EditProfileForm";
             Load += EditProfileForm_Load;
@@ -154,5 +173,6 @@
         private TextBox txtNoteTitle;
         private TextBox txtUserName;
         private Label lblUserName;
+        private Button btnBack;
     }
 }

@@ -18,13 +18,13 @@ namespace NotesApp.Data
         {
         }
 
-        public NotesDbContext() // за старото поведение без опции
+        public NotesDbContext() 
         {
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured) // Много важно: само ако няма вече подадени настройки!
+            if (!optionsBuilder.IsConfigured) 
             {
                 optionsBuilder.UseMySql(
                     "server=localhost;database=notesdb;user=root;password=2658;",

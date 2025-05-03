@@ -87,5 +87,11 @@ namespace NotesApp.Forms
             MessageBox.Show("Профилът е обновен успешно!");
             Close();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
     }
 }

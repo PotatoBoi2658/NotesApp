@@ -50,13 +50,20 @@ namespace NotesApp.Forms
                 Email = email,
                 Password = password
             };
-            
 
-            _userService.AddUser(username,email,password);
+
+            _userService.AddUser(username, email, password);
             MessageBox.Show("Регистрацията е успешна!");
             var startForm = new StartForm();
             startForm.Show();
             this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var startForm = new StartForm();
+            startForm.Show();
         }
     }
 }

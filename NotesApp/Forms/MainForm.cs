@@ -14,7 +14,7 @@ namespace NotesApp
         {
             InitializeComponent();
             _loggedInUser = user;
-            lblCurrentUser.Text = $"Здравей, {user.Username}! Това са вашите бележки:";
+            lblCurrentUser.Text = $"Здравей {user.Username}! Това са вашите бележки:";
             LoadUserNotes(); // Зареждане само на неговите бележки
         }
         private readonly UserService _userService = new UserService();
@@ -136,6 +136,13 @@ namespace NotesApp
         {
             var editForm = new EditProfileForm(_loggedInUser);
             editForm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            var startForm = new StartForm();
+            startForm.Show();
         }
     }
 }

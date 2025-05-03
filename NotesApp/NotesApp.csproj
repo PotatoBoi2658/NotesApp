@@ -1,13 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-<PropertyGroup>
-    <StartupObject>NotesApp.Program</StartupObject>
-</PropertyGroup>
+<PropertyGroup />
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net9.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>NotesApp.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
