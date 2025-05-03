@@ -37,6 +37,7 @@
             txtUsername = new TextBox();
             btnRegister = new Button();
             btnBack = new Button();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -97,7 +98,7 @@
             // btnRegister
             // 
             btnRegister.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
-            btnRegister.Location = new Point(12, 182);
+            btnRegister.Location = new Point(12, 190);
             btnRegister.Name = "btnRegister";
             btnRegister.Size = new Size(177, 40);
             btnRegister.TabIndex = 6;
@@ -108,7 +109,7 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
-            btnBack.Location = new Point(195, 182);
+            btnBack.Location = new Point(195, 190);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(140, 40);
             btnBack.TabIndex = 7;
@@ -116,12 +117,25 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 7F);
+            checkBox1.Location = new Point(216, 126);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(119, 16);
+            checkBox1.TabIndex = 11;
+            checkBox1.Text = "Проверка на парола";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tan;
-            ClientSize = new Size(345, 231);
+            ClientSize = new Size(345, 238);
+            Controls.Add(checkBox1);
             Controls.Add(btnBack);
             Controls.Add(btnRegister);
             Controls.Add(txtUsername);
@@ -147,5 +161,6 @@
         private TextBox txtUsername;
         private Button btnRegister;
         private Button btnBack;
+        private CheckBox checkBox1;
     }
 }

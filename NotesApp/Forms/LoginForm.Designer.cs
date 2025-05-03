@@ -34,9 +34,9 @@
             txtEmail = new TextBox();
             txtPassword = new TextBox();
             btnLogin = new Button();
-            btnTestLogin = new Button();
             button1 = new Button();
             btnBack = new Button();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -53,7 +53,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
-            label2.Location = new Point(12, 55);
+            label2.Location = new Point(12, 62);
             label2.Name = "label2";
             label2.Size = new Size(79, 25);
             label2.TabIndex = 1;
@@ -70,7 +70,7 @@
             // txtPassword
             // 
             txtPassword.Font = new Font("Segoe UI", 13F);
-            txtPassword.Location = new Point(96, 55);
+            txtPassword.Location = new Point(96, 59);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(295, 31);
             txtPassword.TabIndex = 3;
@@ -79,29 +79,18 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
-            btnLogin.Location = new Point(35, 100);
+            btnLogin.Location = new Point(115, 146);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(161, 33);
+            btnLogin.Size = new Size(160, 33);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Вход";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
-            // btnTestLogin
-            // 
-            btnTestLogin.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
-            btnTestLogin.Location = new Point(209, 100);
-            btnTestLogin.Name = "btnTestLogin";
-            btnTestLogin.Size = new Size(161, 33);
-            btnTestLogin.TabIndex = 5;
-            btnTestLogin.Text = "Тестов вход";
-            btnTestLogin.UseVisualStyleBackColor = true;
-            btnTestLogin.Click += btnTestLogin_Click;
-            // 
             // button1
             // 
             button1.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
-            button1.Location = new Point(35, 139);
+            button1.Location = new Point(30, 104);
             button1.Name = "button1";
             button1.Size = new Size(211, 33);
             button1.TabIndex = 6;
@@ -112,7 +101,7 @@
             // btnBack
             // 
             btnBack.Font = new Font("Segoe UI Semibold", 13F, FontStyle.Bold);
-            btnBack.Location = new Point(252, 139);
+            btnBack.Location = new Point(252, 104);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(118, 33);
             btnBack.TabIndex = 7;
@@ -120,15 +109,27 @@
             btnBack.UseVisualStyleBackColor = true;
             btnBack.Click += btnBack_Click;
             // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Font = new Font("Segoe UI", 7F);
+            checkBox1.Location = new Point(272, 43);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(119, 16);
+            checkBox1.TabIndex = 8;
+            checkBox1.Text = "Проверка на парола";
+            checkBox1.UseVisualStyleBackColor = true;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Tan;
-            ClientSize = new Size(412, 180);
+            ClientSize = new Size(412, 187);
+            Controls.Add(checkBox1);
             Controls.Add(btnBack);
             Controls.Add(button1);
-            Controls.Add(btnTestLogin);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtEmail);
@@ -149,8 +150,8 @@
         private TextBox txtEmail;
         private TextBox txtPassword;
         private Button btnLogin;
-        private Button btnTestLogin;
         private Button button1;
         private Button btnBack;
+        private CheckBox checkBox1;
     }
 }
